@@ -1,5 +1,5 @@
 <template>
-    <form class="form" @submit="handleSubmit">
+    <form class="form" @submit="handleSubmit" :disabled="!isFormValid">
         <label for="name">Nombre:</label>
         <input type="text" id="name" v-model="name" @blur="validateName" required>
         <span v-if="nameError" class="error-message">El nombre solo debe contener letras</span>
@@ -30,15 +30,20 @@ export default {
             emailError: false
         };
     },
+    computed: {
+        isFormValid() {
+            return !this.nameError && !this.passwordError && !this.emailError;
+        }
+    },
     methods: {
-        /**
-         * Maneja el evento de envío del formulario.
-         * @param {Event} event - Evento de envío del formulario.
-         */
         handleSubmit(event) {
             event.preventDefault();
+            if (this.isFormValid) {
+                console.log('Formulario válido');
+            } else {
+                console.log('Formulario inválido');
+            }
         },
-        // Valida el nombre ingresado.
         validateName() {
             const regex = /^[a-zA-Z]+$/;
             this.nameError = !regex.test(this.name);
