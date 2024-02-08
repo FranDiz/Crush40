@@ -13,10 +13,24 @@
     top: 0;
     z-index: 10;
     background-color: #0a0528;
-    border-bottom: 4px solid #12fcff;
-    border-right: 4px solid #12fcff;
-    border-left: 4px solid #12fcff;
-    border-radius: 5px;
+    border-radius: 0.5em;
+    border: 2px solid #00d5ff;
+    box-shadow: 
+    0 0 2px #00d5ff,
+    0 0 7px #00d5ff,
+    inset 0 0 2px #00d5ff,
+    inset 0 0 7px #00d5ff;
+          transition: border 0.3s, box-shadow 0.3s;
+}
+.header:hover {
+    background-color: #17012a;
+    border: 5px solid #00d5ff;
+    box-shadow: 
+        0 0 10px #00d5ff,
+        0 0 20px #00d5ff,
+        inset 0 0 10px #00d5ff,
+        inset 0 0 20px #00d5ff; 
+    transition: border 0.3s, box-shadow 0.3s;
 }
 
 .header__logo {

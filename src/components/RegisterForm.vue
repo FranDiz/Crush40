@@ -12,7 +12,7 @@
         <input type="email" id="email" v-model="email" @blur="validateEmail" required>
         <span v-if="emailError" class="error-message">Formato de correo electrónico inválido</span>
 
-        <button type="submit">Registrarse</button>
+        <button type="submit" :disabled="!isFormValid">Registrarse</button>
     </form>
 </template>
 
@@ -48,11 +48,9 @@ export default {
             const regex = /^[a-zA-Z]+$/;
             this.nameError = !regex.test(this.name);
         },
-        // Valida la contraseña ingresada.
         validatePassword() {
             this.passwordError = this.password.length < 8;
         },
-        // Valida el correo electrónico ingresado.
         validateEmail() {
             const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             this.emailError = !regex.test(this.email);

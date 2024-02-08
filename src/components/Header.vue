@@ -1,9 +1,9 @@
 <template>
   <header class="header">
-   <h1 class="header__logo">{{ title }}</h1>
+   <h1 class="header__logo">Crush40</h1>
     <div class="header__buttons">
-      <RouterLink to="/" class="button">{{login}}</RouterLink>
-      <RouterLink to="/register" class="button">{{register}}</RouterLink>
+      <RouterLink to="/" class="button">Entrar</RouterLink>
+      <RouterLink to="/register" class="button">Registrarse</RouterLink>
     </div>
   </header>
 </template>
@@ -12,13 +12,6 @@
 import '../assets/styles/Header.css';
 import { RouterLink } from 'vue-router';
 export default {
-  data() {
-    return {
-      title: 'Crush 40',
-      login: 'Login',
-      register: 'Register'
-    }
-  },  
   name: 'Header',
 }
 </script>

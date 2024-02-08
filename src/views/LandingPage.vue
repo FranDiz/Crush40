@@ -3,8 +3,10 @@
         <Header/>
     </header>
     <main>
-        <Dashboard/>
-        <section>
+        <aside class="nav-dashboard">
+            <Dashboard/>
+        </aside>
+        <section class="search-results">
             <SearchList/>
         </section>
     </main>
