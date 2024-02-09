@@ -13,23 +13,16 @@
     top: 0;
     z-index: 10;
     background-color: #0a0528;
-    border-radius: 0.5em;
-    border: 2px solid #00d5ff;
-    box-shadow: 
-    0 0 2px #00d5ff,
-    0 0 7px #00d5ff,
-    inset 0 0 2px #00d5ff,
-    inset 0 0 7px #00d5ff;
           transition: border 0.3s, box-shadow 0.3s;
 }
 .header:hover {
     background-color: #17012a;
-    border: 5px solid #00d5ff;
+    border: 1px solid #00d5ff;
     box-shadow: 
-        0 0 10px #00d5ff,
-        0 0 20px #00d5ff,
-        inset 0 0 10px #00d5ff,
-        inset 0 0 20px #00d5ff; 
+        0 0 1px #00d5ff,
+        0 0 3px #00d5ff,
+        inset 0 0 1px #00d5ff,
+        inset 0 0 3px #00d5ff; 
     transition: border 0.3s, box-shadow 0.3s;
 }
 
@@ -55,10 +48,12 @@
 }
 
 .button {
+    font-family: 'Inter', sans-serif;
     margin-left: 1em;
     padding: 0.5em 1em;
     border-radius: 0.25em;
     border: 2px solid #12fcff;
+    color: #ccc;
     background: linear-gradient(#540071, #23012f);
     cursor: pointer;
     box-shadow: 
@@ -79,4 +74,15 @@
         inset 0 0 10px #8500b2,
         inset 0 0 20px #8500b2;
     transition: 0.3s; 
+}
+
+@media screen and (max-width: 768px) {
+    .button {
+        font-size: 1em;
+        padding: 0.4em 0.4em;
+    }
+    .header__logo{
+        font-size: 2.2em;
+    }
+    
 }

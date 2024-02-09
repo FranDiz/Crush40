@@ -112,7 +112,7 @@
 }
 
 .results {
-    max-height:70%;
+    max-height:100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     border-radius: 0.5em;
@@ -146,4 +146,15 @@ img:hover {
     .results {
         grid-template-columns: 1fr 1fr; /* Cambia a dos columnas */
     }
-}
+    .results{
+        max-height: 70%;
+    }
+    .songs {
+        margin: 2px;
+        font-size: 0.7em;
+    }
+    
+    .portrait {
+        width: 100%;
+        max-width: 20em;}
+    }

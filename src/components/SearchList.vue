@@ -68,7 +68,7 @@ export default {
         .then(data => (token.value = data.access_token))
     })
 
-    // Función para buscar canciones.
+
     const search = async () => {
       let searchUrl = ''
       if (searchType.value === 'track') {
@@ -92,8 +92,6 @@ export default {
       } else if (searchType.value === 'album') {
         results.value = response.data.albums.items
       }
-
-      console.log(results.value)
     }
 
     return {
