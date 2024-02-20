@@ -1,46 +1,40 @@
 <template>
-  <section class="search-list">
-    <form class="form" @submit.prevent="search">
+    <form class="form___search" @submit.prevent="search">
+      <select v-model="searchType" class="form___search-type">
+      <option value="track" class="form___search-type-value">Canción</option>
+      <option value="artist" class="form___search-type-value">Artista</option>
+      <option value="album" class="form___search-type-value"> Álbum</option>
+    </select>
       <input class="input-songs" type="text" v-model="query" placeholder="Buscar una canción" />
       <button type="submit" class="button-search">Buscar</button>
     </form>
-    <select v-model="searchType" class="search-type">
-      <option value="track">Canción</option>
-      <option value="artist">Artista</option>
-      <option value="album">Álbum</option>
-    </select>
     <ul v-if="results" class="results">
       <li v-for="result in results" :key="result.id">
-        <div class="songs">
-          <div class="portrait">
             <template v-if="searchType === 'track'">
               <router-link :to="`/product/${result.id}`">
               <img :src="result.album.images[0].url" alt="Portada del álbum" class="portrait-img" />
-              {{ result.name }} por {{ result.artists[0].name }}
               </router-link>
+              <span class="portrait-title">{{ result.name }} por {{ result.artists[0].name }}</span>
             </template>
             <template v-else-if="searchType === 'artist'">
               <router-link :to="`/product/${result.id}`">
               <img :src="result.images[0].url" alt="Portada del álbum" class="portrait-img" />
-              {{ result.name }}
               </router-link>
+              <span class="portrait-title">{{ result.name }}</span>
             </template>
             <template v-else-if="searchType === 'album'">
               <router-link :to="`/product/${result.id}`">
               <img :src="result.images[0].url" alt="Portada del álbum" class="portrait-img" />
-              {{ result.name }} de {{ result.artists[0].name }}
               </router-link>
+              <span class="portrait-title">{{ result.name }} de {{ result.artists[0].name }}</span>
             </template>
-          </div>
-        </div>
       </li>
     </ul>
-  </section>  
 </template>
 
 
 <script>
-import { ref, watchEffect } from 'vue'
+import { ref, watchEffect, watch } from 'vue'
 import axios from 'axios'
 import '../assets/styles/SearchList.css'
 
@@ -68,13 +62,18 @@ export default {
         .then(data => (token.value = data.access_token))
     })
 
+    watch([query], () => {
+      search()
+    })
 
     const search = async () => {
+      results.value = null
       let searchUrl = ''
       if (searchType.value === 'track') {
         searchUrl = `https://api.spotify.com/v1/search?type=track&q=${query.value}`
       } else if (searchType.value === 'artist') {
-          
+        searchUrl = `https://api.spotify.com/v1/search?type=artist&q=${query.value}`
+   
       } else if (searchType.value === 'album') {
         searchUrl = `https://api.spotify.com/v1/search?type=album&q=${query.value}`
       }
@@ -92,6 +91,7 @@ export default {
       } else if (searchType.value === 'album') {
         results.value = response.data.albums.items
       }
+      console.log(results.value)
     }
 
     return {

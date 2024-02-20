@@ -2,7 +2,7 @@
   <header class="header">
    <h1 class="header__logo">Crush40</h1>
     <div class="header__buttons">
-      <RouterLink to="/" class="button">Entrar</RouterLink>
+      <RouterLink to="/login" class="button">Entrar</RouterLink>
       <RouterLink to="/register" class="button">Registrarse</RouterLink>
     </div>
   </header>

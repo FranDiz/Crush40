@@ -1,14 +1,12 @@
-
-
 .dashboard {
   margin-top: 0.5em;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: #0a0528;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items:center;
+  justify-content:flex-start;
   border-radius: 0.5em;
   border: 2px solid #00d5ff;
   box-shadow: 
@@ -32,15 +30,20 @@
 }
 
 .dashboard__welcome {
-  padding-bottom: 3em;
+  color: #12fcff;
+  font-size: 2em;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
 }
 
 .dashboard__links {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items:first baseline;
+  justify-content: center;
   width: 100%;
-  /* Add more styles as needed */
+  padding-bottom: 2em;
+  margin-left: 60%;
 }
 
 .dashboard__input-playlist {

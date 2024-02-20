@@ -1,6 +1,6 @@
 <template>
-    <form class="form___register" @submit="handleSubmit" :disabled="!isFormValid">
-        <h2 class="form___title">Registrarse en Crush40</h2>
+    <form class="form___login" @submit="handleSubmit" :disabled="!isFormValid">
+        <h2 class="form___title">Entrar en Crush40</h2>
 
         <div class="form___separator">
             <label for="name" class="form___label">Nombre:</label>
@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import '../assets/styles/RegisterForm.css';
+import '../assets/styles/LoginForm.css';
 
 export default {
     data() {

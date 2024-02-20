@@ -3,17 +3,17 @@
         <Header/>
     </header>
     <main>
-        <RegisterForm/>
+        <LoginForm/>
     </main>
 </template>
 
 <script>
-import RegisterForm from '../components/RegisterForm.vue';
 import Header from '../components/Header.vue';
-import '../assets/styles/RegisterPage.css';
+import LoginForm from '../components/LoginForm.vue';
+import '../assets/styles/LoginPage.css';
 export default {
     components: {
-        RegisterForm,
+        LoginForm,
         Header
     }
 }

@@ -15,16 +15,6 @@
     background-color: #0a0528;
           transition: border 0.3s, box-shadow 0.3s;
 }
-.header:hover {
-    background-color: #17012a;
-    border: 1px solid #00d5ff;
-    box-shadow: 
-        0 0 1px #00d5ff,
-        0 0 3px #00d5ff,
-        inset 0 0 1px #00d5ff,
-        inset 0 0 3px #00d5ff; 
-    transition: border 0.3s, box-shadow 0.3s;
-}
 
 .header__logo {
     font-family: 'Inter', sans-serif;

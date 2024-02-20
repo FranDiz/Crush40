@@ -1,14 +1,73 @@
-.form{
+.form___register{
+    height: 80vh;
     color: #f5f5f5;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em; 
     width: 50%;
-    border: 4px;
-    border-color: #12fcff;
+    border: 2px solid #12fcff;
+    border-radius: 0.5em;
     box-shadow: 
-        0 0 5px #00d5ff,
-        0 0 10px #00d5ff,
-        inset 0 0 5px #00d5ff,
-        inset 0 0 10px #00d5ff; 
-    transition: border 0.3s, box-shadow 0.3s;
+        0 0 1px #12fcff,
+        0 0 3px #12fcff,
+        inset 0 0 1px #12fcff,
+        inset 0 0 3px #12fcff;
+    background-color: #170528;
+    margin-top: 10px;
+    padding: 20px;
 }
+.form___label{
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.3em;
+}
+.form___input{
+    width: 40%;
+    padding: 5px;
+    font-size: 1em;
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    border: 2px solid #12fcff;
+    border-radius: 10px;
+    background-color: #12fbff00;
+    color: #ffffff;
+}
+.form___separator{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    gap: 1em; 
+    width: 100%;
+
+}
+.form___title{
+    position: relative;
+    top: -5%;
+    font-size: 2em;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    font-size: 2.5em;
+
+}
+.form___submit{
+    background-color: #12fbff00;
+    color: #ffffff;
+    border: 2px solid #12fcff;
+    border-radius: 30px;
+    width: 50%;
+    padding: 10px;
+    font-size: 1.5em;
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+    
