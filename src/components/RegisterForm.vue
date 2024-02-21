@@ -1,6 +1,9 @@
 <template>
     <form class="form___register" @submit="handleSubmit" :disabled="!isFormValid">
-        <h2 class="form___title">Registrarse en Crush40</h2>
+        <div class="form___head">
+            <h2 class="form___title">Registrarse en Crush40</h2>
+            <router-link to="/" class="button">Volver</router-link>
+        </div>
 
         <div class="form___separator">
             <label for="name" class="form___label">Nombre:</label>

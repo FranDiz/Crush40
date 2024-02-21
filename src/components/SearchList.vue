@@ -9,7 +9,7 @@
       <button type="submit" class="button-search">Buscar</button>
     </form>
     <ul v-if="results" class="results">
-      <li v-for="result in results" :key="result.id">
+      <li v-for="result in results" :key="result.id" class="portrait">
             <template v-if="searchType === 'track'">
               <router-link :to="`/product/${result.id}`">
               <img :src="result.album.images[0].url" alt="Portada del álbum" class="portrait-img" />

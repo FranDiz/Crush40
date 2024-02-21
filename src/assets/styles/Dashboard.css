@@ -30,7 +30,7 @@
 }
 
 .dashboard__welcome {
-  color: #12fcff;
+  color: rgb(246, 252, 222);
   font-size: 2em;
   text-align: center;
   font-family: 'Inter', sans-serif;
@@ -44,6 +44,14 @@
   width: 100%;
   padding-bottom: 2em;
   margin-left: 60%;
+}
+.dashboard___link{
+  color: rgb(246, 252, 222);
+  font-size: 1.2em;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 0.5em;
+  text-decoration:none;
 }
 
 .dashboard__input-playlist {

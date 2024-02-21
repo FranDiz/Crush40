@@ -52,6 +52,7 @@
         inset 0 0 5px #00d5ff,
         inset 0 0 10px #00d5ff;
     transition: border 0.3s, box-shadow 0.3s;
+    text-decoration: none;
 }
 
 .button:hover {

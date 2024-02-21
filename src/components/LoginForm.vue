@@ -1,12 +1,13 @@
 <template>
     <form class="form___login" @submit="handleSubmit" :disabled="!isFormValid">
-        <h2 class="form___title">Entrar en Crush40</h2>
-
-        <div class="form___separator">
+        <div class="form___head">
+            <h2 class="form___title">Entrar en Crush40</h2>
+            <router-link to="/" class="button">Volver</router-link>
+        </div>
             <label for="name" class="form___label">Nombre:</label>
             <input type="text" id="name" v-model="name" @blur="validateName" required class="form___input">
             <span v-if="nameError" class="error-message">El nombre solo debe contener letras</span>
-        </div>
+            
         <label for="password" class="form___label">Contraseña:</label>
         <input type="password" id="password" v-model="password" @blur="validatePassword" required class="form___input">
         <span v-if="passwordError" class="error-message">La contraseña debe tener al menos 8 caracteres</span>
@@ -15,7 +16,7 @@
         <input type="email" id="email" v-model="email" @blur="validateEmail" required class="form___input">
         <span v-if="emailError" class="error-message">Formato de correo electrónico inválido</span>
 
-        <button type="submit" :disabled="!isFormValid" class="form___submit">Registrarse</button>
+        <button type="submit" :disabled="!isFormValid" class="form___submit">Entrar</button>
     </form>
 </template>
 
