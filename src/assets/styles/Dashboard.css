@@ -42,8 +42,8 @@
   align-items:first baseline;
   justify-content: center;
   width: 100%;
+  margin-left: 0.5em;
   padding-bottom: 2em;
-  margin-left: 60%;
 }
 .dashboard___link{
   color: rgb(246, 252, 222);

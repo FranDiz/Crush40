@@ -29,3 +29,11 @@ main{
     padding: 0.3em;
     flex-direction: column;
 }
+@media screen and (max-width: 768px) {
+    .search-results{
+        width: 100%;
+    }
+    .nav-dashboard{
+        display: none;
+    }
+}

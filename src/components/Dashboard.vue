@@ -3,7 +3,8 @@
     <nav class="dashboard" v-show="showDashboard">
       <h1 class="dashboard__welcome">Bienvenido</h1>
       <ul class="dashboard__links">
-        <router-link to="/register" class="dashboard___link">Registrarse</router-link>
+        <router-link to="/" class="dashboard___link">Inicio</router-link>
+        <router-link to="/categories" class="dashboard___link">Explorar por categorías</router-link>
         <router-link to="/contact" class="dashboard___link">Contacto</router-link>
         <router-link to="/" class="dashboard___link">¿Qué es Crush40?</router-link>
       </ul>

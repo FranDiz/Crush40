@@ -27,7 +27,7 @@
               <img :src="result.images[0].url" alt="Portada del álbum" class="portrait-img" />
               </router-link>
               <span class="portrait-title">{{ result.name }} de {{ result.artists[0].name }}</span>
-            </template>
+            </template> 
       </li>
     </ul>
 </template>
@@ -73,7 +73,6 @@ export default {
         searchUrl = `https://api.spotify.com/v1/search?type=track&q=${query.value}`
       } else if (searchType.value === 'artist') {
         searchUrl = `https://api.spotify.com/v1/search?type=artist&q=${query.value}`
-   
       } else if (searchType.value === 'album') {
         searchUrl = `https://api.spotify.com/v1/search?type=album&q=${query.value}`
       }
