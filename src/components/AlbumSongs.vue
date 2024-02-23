@@ -5,7 +5,8 @@
   </div>
     <ul v-if="product" class="album__tracks-list">
       <li v-for="item in product.tracks.items" :key="item.id" class="album___tracks">
-        {{ item.name }} - {{songDuration(item.duration_ms) }}
+        {{ item.name }} - {{songDuration(item.duration_ms) }} 
+        <button class="album___add">Añadir</button>
       </li>
     </ul>
     <ul v-else>
@@ -15,7 +16,6 @@
 
 <script>
 import axios from 'axios';
-import '../assets/disc_animation.css';
 import '../assets/styles/AlbumSongs.css';
 export default {
   props: {

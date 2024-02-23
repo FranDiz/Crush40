@@ -32,7 +32,7 @@
     flex-direction: column;
     width: 100%;
     height: 100%;
-    padding: 0.3em;
+    padding: 0.6em;
     margin-top: 20px;
     box-sizing: border-box;
     color: aliceblue;
@@ -45,7 +45,7 @@
         inset 0 0 3px #23012f;
     transition: border 0.3s, box-shadow 0.3s;
     font-family: 'Inter', sans-serif;
-    font-size: 1.3em;
+    font-size: 1.5em;
 }
 .album___tracks:hover{
     border: 4px solid #540071;
@@ -56,4 +56,7 @@
         inset 0 0 20px #540071;
     transition: 0.3s; 
     background-color: #23012f;
+}
+.album___add{
+    width: 20%;
 }
