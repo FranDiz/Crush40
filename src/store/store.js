@@ -2,27 +2,27 @@ import { createStore } from 'vuex';
 
 const store = createStore({
     state:{
-        id:null,
+        userId:null,
         isLoggedIn:false,
     },
     mutations:{
-        setUserInfo(state,userInfo){
-            state.userInfo = userInfo;
+        setUserInfo(state,userId){
+            state.userId = userId;
         },
         setIsLoggedIn(state,isLoggedIn){
             state.isLoggedIn = isLoggedIn;
         }
     },
     actions:{
-        setUserInfo({commit},userInfo){
-            commit('setUserInfo',userInfo);
+        setUserInfo({commit},userId){
+            commit('setUserInfo',userId);
         },
         async setIsLoggedIn({commit},isLoggedIn){
             commit('setIsLoggedIn',isLoggedIn);
         }
     },
     getters:{
-        userInfo: state => state.userInfo,
+        userId: state => state.userId,
         isLoggedIn: state => state.isLoggedIn,
     }
 });

@@ -21,6 +21,7 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
 import '../assets/styles/LoginForm.css';
 
 export default {
@@ -40,10 +41,22 @@ export default {
         }
     },
     methods: {
+        ...mapActions(['setIsLoggedIn', 'setUserId']),
         handleSubmit(event) {
             event.preventDefault();
             if (this.isFormValid) {
-                console.log('Formulario válido');
+                const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+                const usuarioEncontrado = usuarios.find(user => user.name === this.name && user.password === this.password && user.email === this.email);
+
+                if (usuarioEncontrado) {
+                    // Usuario encontrado, iniciar sesión
+                    console.log('Inicio de sesión exitoso');
+                    this.setIsLoggedIn(true);
+                    this.setUserId(usuarioEncontrado.id);
+                } else {
+                    // Usuario no encontrado, mostrar mensaje de error
+                    console.log('Nombre de usuario, correo electrónico o contraseña incorrectos');
+                }
             } else {
                 console.log('Formulario inválido');
             }

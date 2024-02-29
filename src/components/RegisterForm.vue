@@ -47,6 +47,19 @@ export default {
         async handleSubmit(event) {
             event.preventDefault();
             if (this.isFormValid) {
+                const newUser = {
+                    id: Date.now(), // Generamos una ID única basada en la marca de tiempo actual
+                    name: this.name,
+                    email: this.email,
+                    password: this.password
+                };
+
+                // Guardamos el nuevo usuario en el localStorage
+                const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+                usuarios.push(newUser);
+                localStorage.setItem('usuarios', JSON.stringify(usuarios));
+
+
                 await this.setIsLoggedIn(true);
                 console.log(this.$store.state.isLoggedIn);
             } else {
