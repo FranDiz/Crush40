@@ -18,11 +18,12 @@
         <input type="email" id="email" v-model="email" @blur="validateEmail" required class="form___input">
         <span v-if="emailError" class="error-message">Formato de correo electrónico inválido</span>
 
-        <button type="submit" :disabled="!isFormValid" class="form___submit">Registrarse</button>
+        <button type="submit" class="form___submit" @click="handleSubmit">Registrarse</button>
     </form>
 </template>
 
 <script>
+import { mapActions } from 'vuex'; 
 import '../assets/styles/RegisterForm.css';
 
 export default {
@@ -38,16 +39,19 @@ export default {
     },
     computed: {
         isFormValid() {
-            return !this.nameError && !this.passwordError && !this.emailError;
+            return !this.nameError && !this.passwordError && !this.emailError && this.name && this.password && this.email; // Update the condition to include checking if the form fields are empty
         }
     },
     methods: {
-        handleSubmit(event) {
+        ...mapActions(['setIsLoggedIn']), 
+        async handleSubmit(event) {
             event.preventDefault();
             if (this.isFormValid) {
-                console.log('Formulario válido');
+                await this.setIsLoggedIn(true);
+                console.log(this.$store.state.isLoggedIn);
             } else {
-                console.log('Formulario inválido');
+                await this.setIsLoggedIn(false);
+                console.log(this.$store.state.isLoggedIn);
             }
         },
         validateName() {

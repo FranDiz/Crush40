@@ -1,9 +1,15 @@
 <template>
-  
+    <ul class="category-playlist__list">
+      <li class="category-playlist__item" v-for="playlist in product && product.playlists.items" :key="playlist.id">
+        <img :src="playlist.images[0].url" :alt="playlist.name" class="category-playlist__img" />
+        <span class="category-playlist__name">{{ playlist.name }}</span>
+      </li>
+    </ul>
 </template>
 
 <script>
 import axios from 'axios';
+import '../assets/styles/CategoryPlaylists.css';
 
 export default {
     props: {
@@ -14,7 +20,7 @@ export default {
     },
     data() {
     return {
-        product: null,
+      product: null,
       searchUrl: `https://api.spotify.com/v1/browse/categories/${this.categoryId}/playlists`,
       CLIENT_ID: 'b94ff936eb4b484397fabf9f5822d61d',
       CLIENT_SECRET: '23237797c4354eae8b699e6691d8efa2',
@@ -46,6 +52,7 @@ export default {
             console.error(error);
           });
       });
+      console.log(this.categoryId)
   }
 }
 </script>

@@ -7,7 +7,7 @@
             <Dashboard/>
         </aside>
         <section class="category-songs">
-            <CategorySongs :categoryId="categoryId"/>
+            <CategoryPlaylists :categoryId="categoryId"/>
         </section>
     </main>
 </template>
@@ -15,10 +15,10 @@
 <script>
 import Header from '../components/Header.vue';
 import Dashboard from '../components/Dashboard.vue';
-import CategorySongs from '../components/CategorySongs.vue';
+import CategoryPlaylists from '../components/CategoryPlaylists.vue';
 import '../assets/styles/CategoryPage.css';
 export default {
-    components: { Header, Dashboard, CategorySongs },
+    components: { Header, Dashboard, CategoryPlaylists },
     data() {
         return {
             categoryId: this.$route.params.id
@@ -26,3 +26,9 @@ export default {
     },
 }
 </script>
+
+<style scoped>
+
+
+</style>
+

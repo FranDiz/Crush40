@@ -3,10 +3,10 @@
     <input class="categories___search" type="text" v-model="query" placeholder="Explorar por categoría" @input="search" />
   </form>
   <ul class="results___categories">
-    <li v-for="category in filteredCategories" :key="category.id" class="category">
+    <router-link :to="`/category/${category.id}`" v-for="category in filteredCategories" :key="category.id" class="category">
       <img :src="category.icons[0].url" :alt="category.name" class="category-img" />
       <span class="category___name">{{ category.name }}</span>
-    </li>
+    </router-link>
   </ul>
 </template>
 

@@ -1,6 +1,7 @@
 <template>
   <header class="header">
    <h1 class="header__logo">Crush40</h1>
+   <DashboardDrop />
     <div class="header__buttons">
       <RouterLink to="/login" class="button">Entrar</RouterLink>
       <RouterLink to="/register" class="button">Registrarse</RouterLink>
@@ -10,13 +11,15 @@
 
 <script>
 import '../assets/styles/Header.css';
+import DashboardDrop from '../components/DashboardDrop.vue';
 import { RouterLink } from 'vue-router';
 export default {
-  name: 'Header',
+  components: { DashboardDrop, RouterLink },
 }
 </script>
 
-<style>
+<style scoped>
 
 
 </style>
+

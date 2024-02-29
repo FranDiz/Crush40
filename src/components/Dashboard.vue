@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import '../assets/styles/dashboard.css';
+import '../assets/styles/Dashboard.css';
 
 export default {
   name: 'Dashboard',
@@ -46,3 +46,6 @@ export default {
 }
 </script>
 
+<style scoped>
+
+</style>

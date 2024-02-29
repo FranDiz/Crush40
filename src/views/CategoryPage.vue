@@ -19,5 +19,11 @@ import CategoryExplorer from '../components/CategoryExplorer.vue';
 import '../assets/styles/CategoryPage.css';
 export default {
     components: { Header, Dashboard, CategoryExplorer }
-}
+    }
 </script>
+
+<style scoped>
+
+
+</style>
+

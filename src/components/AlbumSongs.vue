@@ -1,5 +1,5 @@
 <template class="album___box">
-  <div class = album___info>
+  <div class="album___info">
     <img v-if="product" :src="product.images[0].url" alt="album cover" class="album___cover">
     <h2 v-if="product" class="album___title">{{ product.name }}</h2>
   </div>
@@ -16,7 +16,7 @@
 
 <script>
 import axios from 'axios';
-import '../assets/styles/AlbumSongs.css';
+import '../assets/styles/AlbumSongs.css?scoped';
 export default {
   props: {
     albumId: {
@@ -77,6 +77,6 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>

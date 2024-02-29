@@ -21,5 +21,10 @@ export default {
   components: { Header, Dashboard, ContactForm }
 };
 </script>
-<style>
+
+
+<style scoped>
+
+
 </style>
+
