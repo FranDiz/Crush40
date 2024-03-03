@@ -1,4 +1,10 @@
-
+main{
+    background-color: #0a0528;
+    display: flex;
+    justify-content:space-between;
+    align-items: flex-start; /* Posiciona en la parte superior */
+    height: 100%;
+}
 .nav-dashboard{
     width:40%;
     height: 100%;

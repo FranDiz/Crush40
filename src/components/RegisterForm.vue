@@ -59,7 +59,6 @@ export default {
                 usuarios.push(newUser);
                 localStorage.setItem('usuarios', JSON.stringify(usuarios));
 
-
                 await this.setIsLoggedIn(true);
                 console.log(this.$store.state.isLoggedIn);
             } else {
